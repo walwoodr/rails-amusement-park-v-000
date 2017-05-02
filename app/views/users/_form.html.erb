@@ -1,0 +1,22 @@
+<%= form_for user do |f| %>
+
+  <%= f.label :name %><br>
+  <%= f.text_field :name %><br></br>
+  <%= f.label :password %><br>
+  <%= f.password_field :password %><br></br>
+  <%= f.label :height %>
+  <span class="info-text">in inches</span><br>
+  <%= f.text_field :height %><br></br>
+  <%= f.label :nausea %>
+  <span class="info-text">from 1-5</span><br>
+  <%= f.text_field :nausea %><br></br>
+  <%= f.label :happiness %>
+  <span class="info-text">from 1-5</span><br>
+  <%= f.text_field :happiness %><br></br>
+  <%= f.label :tickets, "Dollars to spend"  %><br>
+  <%= f.text_field :tickets%><br></br>
+  <%= f.check_box :admin %>
+  <%= f.label :admin, "Amusement park owner" %><br></br>
+  <%= f.submit %>
+
+<% end %>

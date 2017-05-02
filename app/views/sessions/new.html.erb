@@ -1,0 +1,11 @@
+<%= form_tag sign_in_path, method: :post, class: 'new_user', id: 'new_user' %>
+
+  <div class="field">
+    <%= label_tag :'user[name]', "Username" %><br>
+    <%= text_field_tag :'user[name]' %><br><br>
+    <%= label_tag :'user[password]', "Password" %><br>
+    <%= password_field_tag :'user[password]' %><br><br>
+  </div>
+  <div class="actions">
+    <%= submit_tag "Sign In" %>
+  </div>

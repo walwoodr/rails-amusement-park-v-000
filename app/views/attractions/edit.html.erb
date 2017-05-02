@@ -1,0 +1,5 @@
+<h1>Edit <%= @attraction.name %></h1>
+
+<%= render partial: 'attractions/form', locals: {attraction: @attraction} %>
+
+<%= link_to "Delete #{@attraction.name}", attraction_path(@attraction), method: :delete if current_user.admin %>

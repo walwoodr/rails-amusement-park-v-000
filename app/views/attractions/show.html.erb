@@ -1,0 +1,8 @@
+<%= content_tag :h1, @attraction.name %>
+<div class="ride-info">
+  <p>Costs <%= pluralize(@attraction.tickets, 'ticket') %>.</p>
+  <p>Nausea rating: <%= @attraction.nausea_rating %></p>
+  <p>Happiness rating: <%= @attraction.happiness_rating %></p>
+  <%= button_to "Go on this ride", ride_path(@attraction) if !current_user.admin %>
+  <%= link_to "Edit Attraction", edit_attraction_path(@attraction) if current_user.admin %>
+</div>
